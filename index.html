@@ -9,6 +9,43 @@
 </head>
 
 <body>
+
+    <!-- =========================================
+        REPRODUCTOR DE MÚSICA DE FONDO
+    ========================================= -->
+
+    <div class="music-player" id="musicPlayer">
+
+        <div class="music-info">
+            <span class="music-icon">♪</span>
+
+            <div>
+                <strong>Nuestra canción</strong>
+                <small>Al'is</small>
+            </div>
+        </div>
+
+        <button id="musicToggle" type="button" aria-label="Reproducir o pausar música">
+            ▶
+        </button>
+
+        <input
+            id="musicVolume"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.25"
+            aria-label="Volumen"
+        >
+
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="assets/audios/musica-fondo.mpeg" type="audio/mpeg">
+            Tu navegador no puede reproducir este audio.
+        </audio>
+
+    </div>
+
 <main>
 
     <!-- =========================================
@@ -37,7 +74,7 @@
                 hace mucho tiempo.
             </p>
 
-            <button id="startButton" class="primary-button">
+            <button id="startButton" type="button" class="primary-button">
                 Comenzar <span>↓</span>
             </button>
         </div>
@@ -70,7 +107,7 @@
                 a punto de comenzar.
             </p>
 
-            <button id="nextButton" class="text-button">
+            <button id="nextButton" type="button" class="text-button">
                 Continuar <span>→</span>
             </button>
         </div>
@@ -159,7 +196,7 @@
                     “¿Quieres ser mi novia?”
                 </p>
 
-                <button id="yesButton" class="yes-button">
+                <button id="yesButton" type="button" class="yes-button">
                     Sí ❤️
                 </button>
 
@@ -252,7 +289,7 @@
                 </p>
 
                 <p class="memory-description soft">
-                    Estábamos en la misma iglesia y vivíamos relativamente
+                    Estábamos en la misma iglesia y vivíamos
                     cerca, así que muchas veces podíamos volver juntos.
                     Íbamos, regresábamos, hablábamos y simplemente
                     disfrutábamos estar cerca.
@@ -358,14 +395,11 @@
                 </p>
 
                 <div class="nickname-cloud">
-                    <button class="nickname">amor</button>
-                    <button class="nickname">mi vida</button>
-                    <button class="nickname">papi</button>
-                    <button class="nickname">mami</button>
-                    <button class="nickname">preciosa</button>
-                    <button class="nickname">precioso</button>
-                    <button class="nickname">chinita</button>
-                    <button class="nickname">chiquita</button>
+                    <button type="button" class="nickname">mi amor</button>
+                    <button type="button" class="nickname">mi vida</button>
+                    <button type="button" class="nickname">mi preciosa</button>
+                    <button type="button" class="nickname">mi chinita</button>
+                    <button type="button" class="nickname">mi chiquita</button>
                 </div>
 
                 <div id="nickname-display" class="nickname-display">
@@ -380,7 +414,7 @@
 
                 <h3>Moran Valverde</h3>
 
-                <button id="moran-button" class="moran-button">
+                <button id="moran-button" type="button" class="moran-button">
                     ¿Qué tiene de especial?
                 </button>
 
@@ -418,15 +452,13 @@
                     <div class="turbo-symbol">🐢</div>
                     <p>
                         Mi color favorito era el verde.
-                        Tú adoptaste ese gusto conmigo y,
-                        entre nosotros, imaginamos tener
+                        Y entre nosotros, imaginamos tener
                         una tortuguita.
                     </p>
 
                     <p class="soft">
-                        La llamaríamos Flash.
-                        No fue una mascota real, pero sí
-                        se convirtió en una mascota nuestra.
+                        Lo queriamos llamar Flash.
+                        Quiza en la otra vida, lo tendremos.
                     </p>
                 </div>
             </article>
@@ -443,6 +475,7 @@
                     Y también estuvo él:
                     el pulpo de peluche que te regalé,
                     al que llamamos Tuelquin.
+                    y sabemos por que pusiste ese nombre
                 </p>
             </article>
 
@@ -450,7 +483,7 @@
             <div class="chapter-two-ending">
                 <div class="ending-turtle">🐢</div>
 
-                <p>
+                <p class="soft">
                     Y así eran nuestros primeros días.
                 </p>
 
@@ -498,27 +531,8 @@
 
             <article class="memory-block">
                 <div class="memory-block-title">
-                    <span class="memory-icon">✈️</span>
-                    <h3>Guamote</h3>
-                </div>
-
-
-                <p class="memory-description">
-                    Cuando fuimos con la iglesia a Guamote,
-                    viajamos juntos y regresamos juntos.
-                </p>
-
-                <p class="memory-description soft">
-                    Fue uno de esos viajes que se quedaron
-                    guardados por lo bonito que fue compartirlo contigo.
-                </p>
-            </article>
-
-
-            <article class="memory-block">
-                <div class="memory-block-title">
                     <span class="memory-icon">🍗</span>
-                    <h3>Papipollo</h3>
+                    <h3>Nuestro tan querido y amado Papipollo</h3>
                 </div>
 
                 <div class="food-card">
@@ -565,13 +579,14 @@
                 </div>
 
                 <p class="memory-description">
-                    Yo todavía estaba en el colegio y tú ya ibas
+                    Como olvidar cuando yo todavía estaba en el colegio y tú ya ibas
                     al preuniversitario.
                 </p>
 
                 <p class="memory-description soft">
                     Durante unos meses caminábamos desde Chillogallo
                     hasta un poco antes de mi colegio.
+                    Tantas cosas que pasamos, hasta los sustos que pasamos.
                     Hasta que llegó el día en que ya no podríamos
                     seguir haciéndolo.
                 </p>
@@ -642,8 +657,15 @@
                         <span>♡</span>
                         <h4>Tu familia</h4>
                         <p>
-                            Cuando tu mamá me invitó a comer.
+                            Como no recordar las veces que me invitaste a tu casa.
+                            Y cuando tu mamá me invito a comer.
+                            Compartir con tus hermanos, y ahora con el Miles.
+                            El pequeño Milon,
                             Fue un momento especial y bonito.
+                            <div class="media-frame memory-photo">
+                                <div class="media-placeholder">Foto de su hermano</div>
+                                <img src="assets/fotos/miles.jpg" alt="Milonbb">
+                            </div>
                         </p>
                     </div>
 
@@ -651,9 +673,15 @@
                         <span>♡</span>
                         <h4>Mi familia</h4>
                         <p>
+                            Sin duda con mi familia también compartimos momentos especiales.
                             Cuando te invité a uno de mis cumpleaños.
-                            Viniste con dudas y un poco de miedo,
-                            pero terminamos pasándola bien.
+                            El dia de la prueba, que lo diste aqui.
+                            Cuando venias y pasabamos la tarde.
+                            Terminamos pasándola bien.
+                            <div class="media-frame memory-photo">
+                                <div class="media-placeholder">Nuestra foto</div>
+                                <img src="assets/fotos/familia.jpg" alt="Nosotros">
+                            </div>
                         </p>
                     </div>
                 </div>
@@ -678,60 +706,110 @@
                 </p>
             </article>
 
+            <article class="memory-block song-memory">
+
+                <div class="memory-block-title">
+                    <span class="memory-icon">🎤</span>
+                    <h3>Una canción que quedó para siempre</h3>
+                </div>
+
+                <p class="memory-description">
+                    Nunca olvidaré la vez en la que me cantaste una canción.
+                </p>
+
+                <p class="memory-description soft">
+                    Siempre quise cantar junto a ti, y aunque no lo hicimos, siempre recordaré
+                    ese momento y la canción que me cantaste.
+                    Quise mezclar mi voz con la tuya,
+                    y quedó este pequeño recuerdo de los dos.
+                </p>
+
+                <div class="song-memory-card">
+
+                    <div class="song-memory-icon">🎶</div>
+
+                    <p class="song-memory-label">
+                        UN RECUERDO DE LOS DOS
+                    </p>
+
+                    <h3>Donde está el amor</h3>
+
+                    <p class="song-memory-artist">
+                        Pablo Alborán ft Jesse & Joy
+                    </p>
+
+                    <audio controls preload="metadata">
+                        <source src="assets/audios/donde-esta-el-amor.aac" type="audio/mpeg">
+                        Tu navegador no puede reproducir este audio.
+                    </audio>
+
+                    <p class="song-memory-note">
+                        Tu voz, mi voz y un recuerdo
+                        que decidí guardar.
+                    </p>    
+
+                </div>
+
+            </article>
+
             <!-- =========================================
-     LA DANZA — ALGO ESPECIAL DE ELLA
-========================================= -->
+                LA DANZA — ALGO ESPECIAL DE ELLA
+            ========================================= -->
 
-<article class="memory-block dance-memory">
+            <article class="memory-block dance-memory">
 
-    <div class="memory-block-title">
-        <span class="memory-icon">💃</span>
-        <h3>Pero hay algo que siempre admiré de ti</h3>
-    </div>
+                <div class="memory-block-title">
+                    <span class="memory-icon">💃</span>
+                    <h3>Pero hay algo que siempre admiré de ti</h3>
+                </div>
 
-    <p class="memory-description">
-        Entre todas las cosas que haces,
-        hay una que siempre sentí que te hacía
-        especialmente feliz.
-    </p>
+                <p class="memory-description">
+                    Entre todas las cosas que haces,
+                    hay una que siempre sentí que te hacía
+                    especialmente feliz.
+                </p>
 
-    <p class="memory-description soft">
-        La danza.
-    </p>
+                <p class="memory-description soft">
+                    La danza.
+                </p>
 
-    <div class="media-frame video-frame dance-video">
-        <div class="media-placeholder">
-            Video de nosotros bailando
-        </div>
+                <div class="media-frame video-frame dance-video">
+                    <div class="media-placeholder">
+                        Video de nosotros bailando
+                    </div>
 
-        <video controls preload="metadata" playsinline>
-            <source src="assets/videos/danza.mp4" type="video/mp4">
-        </video>
-    </div>
+                    <video controls preload="metadata" playsinline>
+                        <source src="assets/videos/danza.mp4" type="video/mp4">
+                    </video>
+                </div>
 
-    <p class="memory-description">
-        Siempre me gustó verte danzar.
-        No solamente porque danzabas bonito,
-        sino porque cuando lo hacías se notaba
-        cuánto te gustaba.
-    </p>
+                <p class="memory-description">
+                    Siempre me gustó verte danzar.
+                    No solamente porque danzabas bonito,
+                    sino porque cuando lo hacías se notaba
+                    cuánto te gustaba.
+                    Ver como lo disfrutas, ver cuanto te apasiona.
+                    Sentir que gracias a ti, sé lo que sé
+                    y descubri mi amor por la danza.
+                </p>
 
-    <p class="memory-description soft">
-        Y entre todas las cosas que sabes hacer,
-        creo que la danza siempre ha sido
-        una de las que mejor haces.
-    </p>
+                <p class="memory-description soft">
+                    Y entre todas las cosas que sabes hacer,
+                    creo que la danza siempre ha sido
+                    una de las que mejor haces.
+                    La manera en como lo haces,
+                    Simplemente eres tú.
+                </p>
 
-    <p class="memory-description">
-        Eres una gran bailarina y una gran danzante.
-        Y siempre me ha gustado poder decir
-        que tuve la oportunidad de compartir
-        esa parte de ti.
-    </p>
+                <p class="memory-description">
+                    Eres una gran bailarina y una gran danzante.
+                    Y siempre me ha gustado poder decir
+                    que tuve la oportunidad de compartir
+                    escenario contigo, y muchas presentaciones mas
+                    dentro y fuera de la iglesia.
+                </p>
 
-</article>
-
-            
+            </article>
 
         </div>
     </section>
@@ -780,9 +858,9 @@
 
                 <p>
                     También tuvimos que soportar comentarios de otras
-                    personas cuando se enteraron de nuestra relación.
-                    Nosotros no habíamos salido a anunciarla;
-                    simplemente la gente fue enterándose.
+                    personas, malas caras, criticas y muchas cosas.
+                    Pero no nos detuvo, seguimos con lo nuestro,
+                    y que lindo pasar todo contigo a pesar de todo.
                 </p>
 
                 <p>
@@ -853,26 +931,19 @@
                 una parte de nuestra historia.
             </p>
 
-            <button id="ringReveal" class="ring-button">
+            <button id="ringReveal" type="button" class="ring-button">
                 Hay algo más aquí ❤️
             </button>
 
             <div id="ringContent" class="ring-content">
                 <div class="ring-visual">
                     <div class="ring">23/03/19</div>
-                    <div class="ring">Al'is</div>
+                    <div class="ring">Alex ❤️ Lis </div>
                 </div>
 
                 <p>
                     Los dos llevan nuestra fecha,
-                    un corazón y <strong>Al'is</strong>.
-                </p>
-
-                <p class="soft">
-                    La tortuguita no pudo entrar en el diseño
-                    porque tenía demasiados detalles,
-                    pero su significado sigue aquí:
-                    Turbo, nuestra pequeña mascota imaginaria.
+                    y <strong>Alex ❤️ Lis</strong>.
                 </p>
 
             </div>
@@ -975,6 +1046,7 @@
     </section>
 
 </main>
+
 
 <script src="script.js"></script>
 </body>
